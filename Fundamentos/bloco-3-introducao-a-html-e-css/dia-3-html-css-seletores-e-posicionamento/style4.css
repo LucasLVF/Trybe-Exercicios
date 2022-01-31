@@ -1,0 +1,6 @@
+div:hover
+{
+    border-style: solid;
+    border-color: red;
+    color: green;
+}
