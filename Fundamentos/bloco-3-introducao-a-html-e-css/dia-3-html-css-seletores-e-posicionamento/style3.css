@@ -1,0 +1,23 @@
+h1
+{
+    text-align: center;
+}
+p
+{
+    text-align: center;
+
+}
+
+li:hover
+{
+    background-color: black;
+    color: white;
+
+}
+li:active
+{
+    color: red;
+}
+ol, ul{
+    list-style: none;
+}
