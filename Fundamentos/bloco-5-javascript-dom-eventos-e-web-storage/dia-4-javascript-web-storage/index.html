@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #paragrafo
+        {
+            text-align: center;            
+        }
+
+        #titulo
+        {
+            text-align: center;
+        }
+        .tituloBotao
+        {
+            display: inline-block;
+            margin-left: 280px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body id="fundo">
+    <main>
+        <section>
+            <div>
+                <h1 id="titulo">Lorem Ipsum</h1>
+                <p id="paragrafo">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas in ex id augue vestibulum
+                    pretium. Morbi ut lacus at metus aliquam vestibulum nec at quam. Cras eget dolor ligula. Curabitur
+                    faucibus convallis semper. Suspendisse accumsan, magna eu vestibulum ultrices, sem tortor egestas
+                    eros, non mattis eros mi eget sem. Vivamus consequat et elit vel luctus. Sed viverra elit ac
+                    scelerisque gravida. Morbi nec suscipit dui, ut tincidunt leo.
+
+                    Aenean in ipsum ut nisi egestas venenatis quis eget sapien. Nullam consectetur tempus ipsum et
+                    condimentum. Nulla facilisi. Ut fringilla metus vehicula, semper nibh volutpat, ullamcorper enim.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim faucibus sollicitudin. Morbi
+                    in ligula eros.
+
+                    Sed ultrices lobortis euismod. Proin eleifend enim ut nibh cursus dictum. Mauris aliquet id nunc at
+                    condimentum. Sed nec rutrum arcu. Aenean vulputate neque ut malesuada aliquam. Nullam vitae placerat
+                    sem, id bibendum nisi. Donec dapibus felis ultricies nulla ullamcorper suscipit vitae non nisl. Cras
+                    sit amet urna metus. Nam erat mauris, venenatis ac tellus sit amet, tincidunt tempor augue. Etiam
+                    neque leo, blandit id hendrerit id, pellentesque at neque. Sed sit amet mauris neque. Nunc libero
+                    ligula, cursus quis euismod sed, accumsan et justo. Integer nibh libero, sodales ac sollicitudin
+                    vitae, feugiat eget dolor. Nullam pulvinar eros non luctus aliquet. Phasellus sit amet augue metus.
+                    Mauris a facilisis lectus.
+
+                    Aliquam laoreet tellus pretium, accumsan lectus eget, rhoncus diam. Nunc mollis euismod lorem, a
+                    facilisis enim dapibus et. Aenean posuere velit tellus, in mollis neque congue non. Integer lectus
+                    eros, consequat et diam vel, imperdiet aliquet lectus. Cras eu ipsum quis odio laoreet bibendum eget
+                    eu neque. Sed porttitor arcu eget risus eleifend bibendum. Maecenas interdum mauris non diam
+                    lobortis pulvinar.
+
+                    Vivamus iaculis nibh et nibh vestibulum, a suscipit sapien vulputate. Nunc commodo mollis mauris,
+                    sed finibus neque. Duis tristique orci feugiat imperdiet blandit. Sed pharetra eleifend fermentum.
+                    Morbi et semper mi. Fusce dapibus libero a neque accumsan bibendum eu vitae erat. Ut tellus nisl,
+                    tincidunt vel velit vitae, fermentum posuere nunc. Fusce viverra malesuada massa a imperdiet. In
+                    fringilla porta arcu, eget sollicitudin lorem. Sed elit felis, faucibus et eleifend sollicitudin,
+                    vulputate quis erat. Nulla porta nec mauris et dictum. Quisque tristique erat eu urna tincidunt, eu
+                    semper velit volutpat. Aliquam a feugiat dui, ut faucibus lacus. Nullam in arcu mollis, tincidunt
+                    neque a, congue lorem. Nunc odio lacus, aliquet eu fringilla at, hendrerit non leo. Nulla sit amet
+                    pretium quam, sed efficitur justo."
+                </p>
+            </div>
+        </section>
+        <section>
+            <div class="tituloBotao">
+                Mudar Fonte
+                <p class="fontes">Arial</p>
+                <p class="fontes">Times New Roman</p>
+                <p class="fontes">Mono space</p>
+            </div>
+            <div class="tituloBotao">
+                Mudar Cor de Fundo
+                <p class="cores">Verde</p>
+                <p class="cores">Amarelo</p>
+                <p class="cores">Branco</p>
+            </div>
+            
+        </section>
+
+    </main>
+
+
+
+
+    <script>
+        
+        let clickFonte = document.querySelectorAll(".fontes")
+        clickFonte[0].addEventListener("click", mudaFonte)
+        clickFonte[1].addEventListener("click", mudaFonte)
+        clickFonte[2].addEventListener("click", mudaFonte)
+        let paragrafo = document.querySelector("#paragrafo")
+        paragrafo.style.fontFamily = localStorage.getItem('fonte')
+        function mudaFonte(opcao)
+        {
+            //console.log(opcao.target);
+            if(opcao.target == clickFonte[0])
+            {
+                localStorage.setItem('fonte', 'arial')
+                paragrafo.style.fontFamily = localStorage.getItem('fonte')               
+            }
+            if(opcao.target == clickFonte[1])
+            {
+                localStorage.setItem('fonte', 'Times New Roman')
+                paragrafo.style.fontFamily = localStorage.getItem('fonte')
+            }
+            if(opcao.target == clickFonte[2])
+            {
+                localStorage.setItem('fonte', 'Mono space')
+                paragrafo.style.fontFamily = localStorage.getItem('fonte')
+            }
+        }
+
+
+        let clickCor = document.querySelectorAll(".cores")
+        clickCor[0].addEventListener("click", mudaCor)
+        clickCor[1].addEventListener("click", mudaCor)
+        clickCor[2].addEventListener("click", mudaCor)
+        let fundo = document.querySelector("#fundo")
+        fundo.style.backgroundColor = localStorage.getItem('cor')
+        function mudaCor(opcao)
+        {
+            //console.log(opcao.target);
+            if(opcao.target == clickCor[0])
+            {   
+                localStorage.setItem('cor', 'green')
+                fundo.style.backgroundColor = localStorage.getItem('cor')
+            }
+            if(opcao.target == clickCor[1])
+            {
+                localStorage.setItem('cor', 'yellow')
+                fundo.style.backgroundColor = localStorage.getItem('cor')
+            }
+            if(opcao.target == clickCor[2])
+            {
+                localStorage.setItem('cor', 'white')
+                fundo.style.backgroundColor = localStorage.getItem('cor')
+            }
+        }
+        
+    </script>
+</body>
+
+</html>
+
+<!-- Cor de fundo da tela;
+Cor do texto;
+Tamanho da fonte;
+Espaçamento entre as linhas do texto;
+Tipo da fonte ( Font family ). -->
