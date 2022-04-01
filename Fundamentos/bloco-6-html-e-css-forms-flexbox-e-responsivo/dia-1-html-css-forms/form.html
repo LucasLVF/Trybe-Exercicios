@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="get" enctype="multipart/form-data">
+
+        <label for="nome"> Nome Completo
+            <input type="text" name="nome" id="nome" minlength="10" maxlength="40">
+        </label>
+        <br>
+        <label for="email"> E-mail
+            <input type="email" name="email" id="email" minlength="10" maxlength="50">
+        </label>
+        <br>
+        <h3>Destination</h3>
+
+        <label for="br">
+            <input type="radio" name="destino" id="br" value="brazil">Brazil
+        </label>
+
+        <label for="lon">
+            <input type="radio" name="destino" id="lon" value="london">London
+        </label>
+
+        <label for="usa">
+            <input type="radio" name="destino" id="usa" value="united states">United States
+        </label>
+
+        <label for="jp">
+            <input type="radio" name="destino" id="jp" value="japan">Japan
+        </label>
+        <br>
+        <h3>Por que você deveria ser a pessoa desenvolvedora a ganhar o concurso TrybeTrip?</h3>
+        <textarea name="pergunta" id="pergunta" cols="30" rows="10" maxlength="500"></textarea>
+        <br>
+        <input type="date" name="date" id="data">
+        <br>
+        <label for="spam">
+            <input type="checkbox" name="spam" id="spam">Gostaria de receber outras incríveis oportunidades oferecidas pela Trybe?
+        </label>
+        <br>
+        <label for="legal">
+            <input type="checkbox" name="legal" id="legal" required>Concordo que imagens das minhas férias poderão ser usadas na divulgação de concursos futuros.
+        </label>
+        <br>
+        <br>
+        <button type="submit" id="enviar">Enviar</button>
+        <button type="reset">Limpar</button>
+    </form>
+    <script>
+        let botao = document.querySelector("#enviar")
+        botao.addEventListener("click",pararBotao)
+        function pararBotao(event)
+        {
+            event.preventDefault();
+        }
+    </script>
+</body>
+</html>
