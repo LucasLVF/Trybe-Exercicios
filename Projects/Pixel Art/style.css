@@ -1,0 +1,40 @@
+.color 
+{    
+    border: solid black 1px;
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+}
+
+ #preto
+{
+    background-color: black;
+} 
+#azul
+{
+    background-color: blue;
+}
+#rosa
+{
+    background-color: pink;
+}
+#roxo
+{
+    background-color: purple;
+}
+
+.pixel
+{
+    display: inline-block;
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border: solid black 1px;
+    margin: 0px;
+}
+
+#pixel-board
+{
+    width: 250px;
+    height: 250px;
+}

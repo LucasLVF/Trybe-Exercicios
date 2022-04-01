@@ -1,0 +1,19 @@
+body
+{
+     background: rgb(253, 251, 251);
+}
+
+#cabecalho
+{
+    position: fixed;
+    top: 0px;
+    background: green;
+    display: block;
+    width: 100%;
+}
+
+#minha_foto
+{
+    width: 400px;
+    margin-top: 80px; 
+}
